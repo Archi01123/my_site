@@ -135,7 +135,7 @@ header {
     border-color: #ebccd1;
 }
 
-.login-form, .register-form {
+.login-form, .register-form, .create-form {
     max-width: 600px; /* Увеличьте ширину формы */
     margin: 5px auto; /* Отступы сверху и по центру */
     padding: 5px; /* Увеличьте внутренние отступы */
@@ -144,7 +144,7 @@ header {
     box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Тень под формой */
 }
 
-.login-form input, .register-form input {
+.login-form input, .register-form input, .create-form input {
     width: 100%; /* Ширина полей ввода */
     margin-bottom: 1px; /* Отступ между полями */
     padding: 5px; /* Внутренние отступы полей */
@@ -152,7 +152,7 @@ header {
     border-radius: 5px; /* Закругленные углы полей */
 }
 
-.login-form button, .register-form button {
+.login-form button, .register-form button .create-form button {
     width: 100%; /* Ширина кнопок */
     padding: 10px; /* Внутренние отступы кнопок */
     background-color: #007bff; /* Цвет кнопок */
@@ -163,6 +163,6 @@ header {
 }
 
 
-.login-form button:hover, .register-form button:hover {
+.login-form button:hover, .register-form button:hover, .create-form button:hover {
     background-color: #0056b3; /* Цвет кнопок при наведении */
 }
