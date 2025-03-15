@@ -1,0 +1,31 @@
+
+
+{% extends 'base.html' %}
+
+{% set title = 'Регистрация' %}
+
+{% block content %}
+    <h1>Регистрация</h1>
+
+    <!-- Отображение flash-сообщений -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div>
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}" role="alert">
+              {{ message }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="post" class="register-form">
+        <input type="text" name="username" placeholder="Введите имя" class="form-control"><br>
+        <input type="text" name="phone_number" placeholder="Введите номер телефона" class="form-control"><br>
+        <input type="text" name="bank_name" placeholder="Введите название банка" class="form-control"><br>
+        <input type="number" name="amount" placeholder="Введите сумму" class="form-control"><br>
+        <button class="btn btn-success" type="submit">Зарегистрироваться</button>
+    </form>
+{% endblock %}
+

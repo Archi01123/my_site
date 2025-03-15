@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% set title = 'Главная страница' %}
+
+{% block content %}
+
+
+
+<h1>Главная Страница</h1>
+
+<!-- Отображение flash-сообщений -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div>
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}" role="alert">
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<ul>
+  <li>Добро пожаловать на наш сайт!</li>
+  <li>Войдите или зарегистрируйтесь</li>
+</ul>
+{% endblock %}
+

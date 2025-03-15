@@ -1,0 +1,168 @@
+header {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #fff;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    width: calc(100% + 40px);
+    margin-left: 0px;
+    margin-right: -40px;
+}
+
+.header__img {
+    height: 40px;
+    width: 64px;
+}
+
+.chat-container {
+    position: fixed; /* Закрепляем окно чата */
+    top: 250px; /* Располагаем под шапкой */
+    right: 120px; /* Прикрепляем к правой границе */
+    width: 300px; /* Ширина окна чата */
+    height: 400px; /* Высота окна чата */
+    border: 1px solid #ccc;
+    padding: 0; /* Убираем верхнее и боковое пространство */
+    background-color: #f0f0f0; /* Фон окна чата */
+}
+
+.chat-header {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.chat-messages {
+    height: calc(100% - 60px); /* Высота области сообщений */
+    overflow-y: auto; /* Автопрокрутка */
+    padding: 10px;
+}
+
+.chat-footer {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    position: absolute; /* Закрепляем внизу окна */
+    bottom: 0;
+    width: calc(100% - 20px); /* Ширина поля ввода и кнопки */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh 0px); /* Высота контейнера минус высота шапки */
+    padding-top: 0; /* Удалите отступ сверху */
+}
+
+.text-center.mt-5 {
+    text-align: center;
+    margin-top: 0px; /* Отступ сверху */
+}
+
+
+/* Эффект при наведении */
+.nav-link:hover {
+    color: #697077 !important;
+    background-color: #e9ecef;
+    transition: all 0.3s ease;
+    border-radius: 5px; /* Закругленные углы */
+}
+
+/* Для главной страницы (убираем дублирование цвета) */
+.nav-item.active .link-secondary {
+    color: #9dc0e7 !important;
+}
+
+/* Индикатор активной ссылки */
+.nav-item.active {
+    border-bottom: 3px solid #123950;
+    margin-bottom: -3px;
+    border-radius: 5px; /* Закругленные углы */
+}
+
+
+/* Для выравнивания кнопок по правому краю */
+.col-md-3.text-end {
+  text-align: right;
+}
+
+/* Для добавления отступа между кнопками */
+.me-2 {
+  margin-right: 8px;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .nav-links ul {
+        overflow-x: auto; /* Появляется горизонтальный скролл */
+    }
+}
+
+.nav-link.active {
+    text-decoration: underline; /* Подчеркивание для активной ссылки */
+    color: #007bff; /* Цвет текста активной ссылки */
+}
+
+.user-info {
+    white-space: nowrap;
+}
+
+.user-count {
+    margin-top: 5px;
+}
+
+.user-count + p {
+    margin-top: 5px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.login-form, .register-form {
+    max-width: 600px; /* Увеличьте ширину формы */
+    margin: 5px auto; /* Отступы сверху и по центру */
+    padding: 5px; /* Увеличьте внутренние отступы */
+    border: 1px solid #ddd; /* Рамка вокруг формы */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Тень под формой */
+}
+
+.login-form input, .register-form input {
+    width: 100%; /* Ширина полей ввода */
+    margin-bottom: 1px; /* Отступ между полями */
+    padding: 5px; /* Внутренние отступы полей */
+    border: 1px solid #ccc; /* Рамка вокруг полей */
+    border-radius: 5px; /* Закругленные углы полей */
+}
+
+.login-form button, .register-form button {
+    width: 100%; /* Ширина кнопок */
+    padding: 10px; /* Внутренние отступы кнопок */
+    background-color: #007bff; /* Цвет кнопок */
+    color: white; /* Цвет текста на кнопках */
+    border: none; /* Удаление рамки вокруг кнопок */
+    border-radius: 5px; /* Закругленные углы кнопок */
+    cursor: pointer; /* Стиль курсора при наведении */
+}
+
+
+.login-form button:hover, .register-form button:hover {
+    background-color: #0056b3; /* Цвет кнопок при наведении */
+}

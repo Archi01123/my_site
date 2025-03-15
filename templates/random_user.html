@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% set title = 'Случайный пользователь' %}
+
+{% block content %}
+    <div class="text-center">
+        <h2>Случайный пользователь</h2>
+        <p>Имя пользователя: {{ user.username }}</p>
+        <p>Название банка: {{ user.bank_name }}</p>
+        
+        
+        <div class="d-flex justify-content-center">
+            <a href="{{ url_for('show_phone', user_id=user.id) }}" class="btn btn-primary me-2">Показать номер</a>
+            <a href="{{ url_for('next_random_user') }}" class="btn btn-primary">Показать следующего</a>
+        </div>
+    </div>
+{% endblock %}

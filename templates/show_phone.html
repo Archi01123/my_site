@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% set title = 'Номер пользователя' %}
+
+{% block content %}
+<h2>Случайный пользователь</h2>
+    {% if user %}
+        <p>Имя пользователя: {{ user.username }}</p>
+        <p>Номер телефона: {{ user.phone_number }}</p>
+        <a href="{{ url_for('random_user') }}" class="btn btn-success">Показать следующего</a>    {% else %}
+        <p>Пользователь не найден.</p>
+    {% endif %}
+{% endblock %}
