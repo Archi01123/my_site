@@ -137,6 +137,7 @@ header {
 
 .login-form, .register-form, .create-form {
     max-width: 600px; /* Увеличьте ширину формы */
+    width: 420px;
     margin: 5px auto; /* Отступы сверху и по центру */
     padding: 5px; /* Увеличьте внутренние отступы */
     border: 1px solid #ddd; /* Рамка вокруг формы */
